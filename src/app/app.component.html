@@ -1,0 +1,13 @@
+<app-navbar (menuClick)="onMenuClicked($event)"></app-navbar>
+<app-jumbotron></app-jumbotron>
+<app-retail *ngIf="isRetail"></app-retail>
+<app-three-dim *ngIf="isThreeD"></app-three-dim>
+<app-painting *ngIf="isPainting"></app-painting>
+<br>
+<app-about></app-about>
+<br>
+<app-contact></app-contact>
+<br>
+<app-footer></app-footer>
+
+
