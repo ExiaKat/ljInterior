@@ -1,0 +1,17 @@
+/deep/.my-modal .modal-content {
+    background-color: transparent !important;
+    border: 0 solid rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+/deep/.modal-backdrop {
+    background-color: #FFFFFF !important;
+}
+/deep/.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+/deep/.modal-header {
+    background-color: rgba(222, 234, 238, 0.00);
+    border-bottom: 0 solid rgba(229, 229, 229, 0.00);
+}

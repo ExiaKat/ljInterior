@@ -8,16 +8,36 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ColItemComponent implements OnInit {
   @Input() artWork: ArtWork;
+  imagePath = "";
+  private index = 0
+  private photoNo = 0;
 
-  constructor() { 
-    this.artWork = new ArtWork("project title", "", []);
-  }
+  constructor() {}
 
   ngOnInit() {
+    this.imagePath = this.artWork.photosPath[this.index];
+    this.photoNo = this.artWork.photosPath.length;
   }
 
-  onOpenGalary(){
-    console.log(this.artWork.photosPath);
-  }
+  onPrevious(){
+    if(this.index > 0){
+      this.index--;
+      this.imagePath = this.artWork.photosPath[this.index];
+    }
+    else{
+      this.index = this.photoNo-1
+      this.imagePath = this.artWork.photosPath[this.index];
+    }
+  } 
 
+  onNext(){
+    if(this.index < this.photoNo-1){
+      this.index++;
+      this.imagePath = this.artWork.photosPath[this.index];
+    }
+    else{
+      this.index = 0;
+      this.imagePath = this.artWork.photosPath[this.index];
+    }
+  }
 }

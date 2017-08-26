@@ -16,6 +16,8 @@ import { ToggleMenuOpenDirective } from './directives/toggle-menu-open.directive
 import { MenuClassActiveDirective } from './directives/menu-class-active.directive';
 import { LJData } from './services/lj_data';
 import { SplitArrayService } from './services/splitArray.service';
+import { GalleryComponent } from './content/gallery/gallery.component';
+import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,12 @@ import { SplitArrayService } from './services/splitArray.service';
     FooterComponent,
     ColItemComponent,
     ToggleMenuOpenDirective,
-    MenuClassActiveDirective
+    MenuClassActiveDirective,
+    GalleryComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    Ng2Bs3ModalModule
   ],
   providers: [LJData, SplitArrayService],
   bootstrap: [AppComponent]

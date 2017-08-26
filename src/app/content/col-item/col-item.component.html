@@ -1,6 +1,47 @@
 <div>
   <label class="text-info">{{artWork.title}}</label>
-  <a (click)="onOpenGalary()" style="cursor:pointer;">
+  <a (click)="modal.open()" style="cursor:pointer;">
     <img [src]="artWork.coverPhotoPath" class="img-responsive">  
   </a>
+
+  <modal #modal [cssClass]="'my-modal'">
+      <modal-header [show-close]="false">
+      </modal-header>
+      <modal-body>
+        <div class="row">
+          <div class="col-sm-12 col-md-12">  
+              <span class="glyphicon glyphicon glyphicon-remove pull-right"
+                    aria-hidden="true"
+                    (click)="modal.close()"></span>             
+              <img class="img-responsive center-block" 
+                   [src]="imagePath"
+                   style="max-height: 400px"
+                   alt="photo here"
+                   (click)="onNext()">    
+                   <!-- add carousel control left and right button -->
+              <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" (click)="onPrevious()">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" (click)="onNext()">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a> -->
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-sm-12 col-md-12">
+              <button class="btn btn-link pull-left text-primary" (click)="onPrevious()">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+              </button>
+              <button class="btn btn-link pull-right text-primary" (click)="onNext()">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+              </button>
+          </div>
+        </div> -->
+      </modal-body>
+      <!-- <modal-footer>
+          <button type="button" class="btn btn-primary" (click)="modal.close()">Close</button>
+      </modal-footer> -->
+  </modal>
 </div>
