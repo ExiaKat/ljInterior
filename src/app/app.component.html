@@ -1,12 +1,11 @@
 <app-navbar (menuClick)="onMenuClicked($event)"></app-navbar>
-<app-retail *ngIf="isRetail"></app-retail>
-<app-three-dim *ngIf="isThreeD"></app-three-dim>
-<app-painting *ngIf="isPainting"></app-painting>
-<br>
-<app-about></app-about>
+<!-- This following three components should be replaced by router-outlet -->
+<!-- <app-retail *ngIf="isRetail"></app-retail>
+<app-rendering *ngIf="isRendering"></app-rendering>
+<app-painting *ngIf="isPainting"></app-painting> -->
+<router-outlet></router-outlet>
 <br>
 <app-contact></app-contact>
 <br>
 <app-footer></app-footer>
-<!-- <app-gallery></app-gallery> -->
 

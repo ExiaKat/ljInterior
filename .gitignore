@@ -44,3 +44,7 @@ Thumbs.db
 
 # Images & Photos
 /src/images
+
+# Firebase
+.firebaserc
+firebase.json

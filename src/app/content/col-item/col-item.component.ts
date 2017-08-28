@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ColItemComponent implements OnInit {
   @Input() artWork: ArtWork;
+  coverPhotoPath: string;
   imagePath = "";
   private index = 0
   private photoNo = 0;
@@ -17,6 +18,7 @@ export class ColItemComponent implements OnInit {
   ngOnInit() {
     this.imagePath = this.artWork.photosPath[this.index];
     this.photoNo = this.artWork.photosPath.length;
+    this.coverPhotoPath = this.artWork.coverPhotoPath;
   }
 
   onPrevious(){
@@ -39,5 +41,12 @@ export class ColItemComponent implements OnInit {
       this.index = 0;
       this.imagePath = this.artWork.photosPath[this.index];
     }
+  }
+
+  onChangeCoverImage(action: string){
+    // if(action === 'enter')
+    //   this.coverPhotoPath = this.artWork.photosPath[1];
+    // else
+    //   this.coverPhotoPath = this.artWork.coverPhotoPath;
   }
 }

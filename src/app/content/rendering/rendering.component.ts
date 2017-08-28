@@ -5,11 +5,11 @@ import { Category } from './../../models/category.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-three-dim',
-  templateUrl: './three-dim.component.html',
-  styleUrls: ['./three-dim.component.css']
+  selector: 'app-rendering',
+  templateUrl: './rendering.component.html',
+  styleUrls: ['./rendering.component.css']
 })
-export class ThreeDimComponent implements OnInit {
+export class RenderingComponent implements OnInit {
   category: Category;
   artWorksCol: Array<ArtWork[]> = [];
 
@@ -17,8 +17,9 @@ export class ThreeDimComponent implements OnInit {
 
   ngOnInit() {
     this.category = this.ljData.categories.find((categoryEle: Category) => {
-      return categoryEle.category == "3D Perspectives";
+      return categoryEle.category == "Renderings";
     });
-    this.artWorksCol = this.splitArrayService.splitArray(4, this.category.artWorks);
+    this.artWorksCol = this.splitArrayService.splitArrayManual(
+      ["1,5,9,13","2,6,10,14","3,7,9,11","4,8,12"], this.category.artWorks);
   }
 }

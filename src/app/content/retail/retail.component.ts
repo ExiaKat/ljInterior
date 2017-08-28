@@ -19,7 +19,8 @@ export class RetailComponent implements OnInit {
     this.category = this.ljData.categories.find((categoryEle: Category) => {
       return categoryEle.category == "Retail";
     });
-    this.artWorksCol = this.splitArrayService.splitArray(4, this.category.artWorks);
+    this.artWorksCol = this.splitArrayService.splitArrayManual(
+      ["1,5,9","2,6,10","3,7,11","4,8,12,13,14"], this.category.artWorks);
   }
 
 }

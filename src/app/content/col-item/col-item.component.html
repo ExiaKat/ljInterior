@@ -1,10 +1,13 @@
 <div>
-  <label class="text-info">{{artWork.title}}</label>
-  <a (click)="modal.open()" style="cursor:pointer;">
-    <img [src]="artWork.coverPhotoPath" class="img-responsive">  
+  <a (click)="modal.open()" 
+      (mouseenter)="onChangeCoverImage('enter')" 
+      (mouseleave)="onChangeCoverImage('leave')" 
+      style="cursor:pointer;">
+    <img [src]="coverPhotoPath" class="img-responsive">  
   </a>
+  <h4 class="title-style">{{artWork.title}}</h4>
 
-  <modal #modal [cssClass]="'my-modal'">
+  <modal #modal [cssClass]="'my-modal'" size="lg">
       <modal-header [show-close]="false">
       </modal-header>
       <modal-body>
@@ -15,7 +18,7 @@
                     (click)="modal.close()"></span>             
               <img class="img-responsive center-block" 
                    [src]="imagePath"
-                   style="max-height: 400px"
+                   style="max-height: 600px"
                    alt="photo here"
                    (click)="onNext()">    
                    <!-- add carousel control left and right button -->

@@ -1,3 +1,7 @@
+.title-style {
+    color: darkgray;
+    font-size: 14px;
+}
 /deep/.my-modal .modal-content {
     background-color: transparent !important;
     border: 0 solid rgba(0, 0, 0, 0);
@@ -8,8 +12,8 @@
     background-color: #FFFFFF !important;
 }
 /deep/.modal-backdrop.in {
-    filter: alpha(opacity=50);
-    opacity: 0.5;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
 }
 /deep/.modal-header {
     background-color: rgba(222, 234, 238, 0.00);

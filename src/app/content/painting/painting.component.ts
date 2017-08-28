@@ -19,6 +19,7 @@ export class PaintingComponent implements OnInit {
     this.category = this.ljData.categories.find((categoryEle: Category) => {
       return categoryEle.category == "Paintings";
     });
-    this.artWorksCol = this.splitArrayService.splitArray(4, this.category.artWorks);
+    this.artWorksCol = this.splitArrayService.splitArrayManual(
+      ["1,5","2","3","4"], this.category.artWorks);
   }
 }
