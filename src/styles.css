@@ -17,7 +17,8 @@ body {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 .modal-backdrop {
-    background-color: #FFFFFF !important;
+    /* background-color: #FFFFFF !important; */
+    background-color: rgb(119, 119, 119) !important;
 }
 .modal-backdrop.in {
     filter: alpha(opacity=80);

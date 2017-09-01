@@ -20,6 +20,6 @@ export class PaintingComponent implements OnInit {
       return categoryEle.category == "Paintings";
     });
     this.artWorksCol = this.splitArrayService.splitArrayManual(
-      ["1,5","2","3","4"], this.category.artWorks);
+      ["1,5,9","2,6,10","3,7,11","4,8,12"], this.category.artWorks);
   }
 }
