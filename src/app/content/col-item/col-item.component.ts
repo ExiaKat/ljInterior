@@ -30,8 +30,7 @@ export class ColItemComponent implements OnInit {
   onPrevious(){
     if(this.index > 0){
       this.index--;
-      this.imagePath = this.artWork.photosPath[this.index];
-      this.imageNumber = this.index+1 + ' / ' + this.photoNo;
+      this.imagePath = this.artWork.photosPath[this.index];      
     }
     if(this.index == 0){
       this.leftIconStyle = {display: 'none'};
@@ -42,8 +41,9 @@ export class ColItemComponent implements OnInit {
     if(this.index < this.photoNo-1){
       this.index++;
       this.toggleLoader = {display: 'block'};
-      this.imagePath = this.artWork.photosPath[this.index];
-      this.imageNumber = this.index+1 + ' / ' + this.photoNo;
+      setTimeout(() => {
+        this.imagePath = this.artWork.photosPath[this.index];
+      }, 2000);
     }
     if(this.index == this.photoNo-1){
       this.rightIconStyle = {display: 'none'};
@@ -76,5 +76,6 @@ export class ColItemComponent implements OnInit {
   }
   onLoad(){
     this.toggleLoader = {display: 'none'};
+    this.imageNumber = this.index+1 + ' / ' + this.photoNo;
   }
 }
