@@ -41,9 +41,7 @@ export class ColItemComponent implements OnInit {
     if(this.index < this.photoNo-1){
       this.index++;
       this.toggleLoader = {display: 'block'};
-      setTimeout(() => {
-        this.imagePath = this.artWork.photosPath[this.index];
-      }, 2000);
+      this.imagePath = this.artWork.photosPath[this.index];
     }
     if(this.index == this.photoNo-1){
       this.rightIconStyle = {display: 'none'};
