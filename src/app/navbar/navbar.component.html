@@ -20,7 +20,8 @@
       <ul #menubar class="nav navbar-nav navbar-right">
         <li [appMenuClassActive]="menubar" (click)="onToggleCategory('project')"><a routerLink="/" style="cursor:pointer;"><h4>Projects</h4></a></li>
         <li [appMenuClassActive]="menubar" (click)="onToggleCategory('rendering')"><a routerLink="/rendering" style="cursor:pointer;"><h4>3D Renders</h4></a></li>
-        <li [appMenuClassActive]="menubar" (click)="onToggleCategory('painting')"><a routerLink="/painting" style="cursor:pointer;"><h4>About Us</h4></a></li>
+        <li [appMenuClassActive]="menubar" (click)="onToggleCategory('painting')"><a routerLink="/painting" style="cursor:pointer;"><h4>Painting</h4></a></li>
+        <li [appMenuClassActive]="menubar" (click)="onToggleCategory('painting')"><a routerLink="/about-me" style="cursor:pointer;"><h4>About Us</h4></a></li>
         <li [appMenuClassActive]="menubar"><a href="#contact" style="cursor:pointer;"><h4>Contact</h4></a></li>
       </ul>
     </div><!--/.nav-collapse -->

@@ -17,11 +17,13 @@ import { LJData } from './services/lj_data';
 import { SplitArrayService } from './services/splitArray.service';
 import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 import { RenderingComponent } from './content/rendering/rendering.component';
+import { AboutMeComponent } from './content/about-me/about-me.component';
 
 const appRoutes: Routes = [
   { path: "", component: RetailComponent },
   { path: "rendering", component: RenderingComponent },
   { path: "painting", component: PaintingComponent },
+  { path: "about-me", component: AboutMeComponent},
 ];
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     ColItemComponent,
     ToggleMenuOpenDirective,
     MenuClassActiveDirective,
-    RenderingComponent
+    RenderingComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
